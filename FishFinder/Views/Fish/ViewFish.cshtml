@@ -1,0 +1,38 @@
+﻿@using FishFinder.Models;
+@model Fish
+
+<h3>@Model.Name Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Season</th>
+        <th>Minimum_Length</th>
+        <th>Maximum_Length</th>
+        <th>Bag_Limit</th>
+        <th>Description</th>
+        <th>FishId</th>
+    </tr>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.Season</td>
+        <td>@Model.Minimum_Length</td>
+        <td>@Model.Maximum_Length</td>
+        <td>@Model.Bag_Limit</td>
+        <td>@Model.Description</td>
+        <td>@Model.FishId</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Fish/UpdateFish/@Model.FishId">Update this Fish</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteFish", "Fish", "Post"))
+    {
+        <input type="hidden" asp-for="FishId" value="@Model.FishId" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this fish" />
+    }
+</div>

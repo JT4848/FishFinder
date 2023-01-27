@@ -14,5 +14,38 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+ /* margin-bottom: 60px;*/
+  background-image: url('/imgs/32-dolphin-fish-mahi-mahi-jumping-out-of-water.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+
+
+/*.nav-link {
+        color: orange;
+        text-decoration: none;
+    }*/
+
+.navbar {
+    background-color: grey;
+    position: sticky;
+}       
+
+h1{
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+a[href]{
+    color:blue;
+}
+
+.table{
+    color:black;
+    background-color: white;
 }

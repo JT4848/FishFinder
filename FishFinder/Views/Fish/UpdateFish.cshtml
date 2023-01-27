@@ -1,0 +1,32 @@
+﻿@using FishFinder.Models
+@model Fish
+
+<h2>Update @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateFishToDatabase", "Fish", "Post"))
+{
+    <input asp-for="FishId" type="hidden" value="@Model.FishId" />
+
+    <label asp-for="Name" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+   
+    <label asp-for="Season" class="control-label">Season</label>
+    <input type="text" name="Season" class="form-control" value="@Model.Season" />
+
+    <label asp-for="Minimum_Length" class="control-label">Minimum_Length</label>
+    <input type="text" name="Minimum_Length" class="form-control" value="@Model.Minimum_Length" />
+
+    <label asp-for="Maximum_Length" class="control-label">Maximum_Length</label>
+    <input type="text" name="Maximum_Length" class="form-control" value="@Model.Maximum_Length" />
+
+    <label asp-for="Bag_Limit" class="control-label">Bag_Limit</label>
+    <input type="text" name="Bag_Limit" class="form-control" value="@Model.Bag_Limit" />
+
+    <label asp-for="Description" class="control-label">Description</label>
+    <input type="text" name="Description" class="form-control" value="@Model.Description" />
+
+    <label asp-for="FishId" class="control-label">FishId</label>
+    <input type="number" step="0.01" name="FishId" class="form-control" value="@Model.FishId" />
+
+    <input type="submit" value="Update Fish" class="btn btn-primary" />
+}

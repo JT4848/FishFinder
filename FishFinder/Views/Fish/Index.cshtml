@@ -1,0 +1,47 @@
+﻿@using FishFinder.Models
+@model IEnumerable<Fish>
+
+<h2>Fish</h2>
+
+
+
+<div style="display: block">
+    <a href="/Fish/InsertFish/">Create a New Fish</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>FishId</th>
+        <th>Name</th>
+        <th>Season</th>
+        <th>Minimum_Length</th>
+        <th>Maximum_Length</th>
+        <th>Bag_Limit</th>
+        <th>Description</th>
+        
+    </tr>
+
+    @foreach (var fish in @Model)
+    {
+        <tr>
+            <td><a href=/Fish/ViewFish/@fish.FishId>@fish.FishId</a></td>
+            <td>@fish.Name</td>
+            <td>@fish.Season</td>
+            <td>@fish.Minimum_Length</td>
+            <td>@fish.Maximum_Length</td>
+            <td>@fish.Bag_Limit</td>
+            <td>@fish.Description</td>
+            
+        </tr>
+    }
+
+</table>
+
+
+<style>
+    body{
+        background-color:black;
+    }
+
+
+</style>

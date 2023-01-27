@@ -25,6 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Fish" asp-action="Index">Fish</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -47,3 +50,21 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+  @*  <style>
+    body {
+        background-color: teal;
+    }
+
+    /*.nav-link {
+        color: orange;
+        text-decoration: none;
+    }*/
+
+    .navbar{
+        background-color: grey;
+        position: sticky;
+        
+    }
+
+    </style>*@
