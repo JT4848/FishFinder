@@ -23,6 +23,8 @@ body {
 
 
 
+
+
 /*.nav-link {
         color: orange;
         text-decoration: none;
@@ -48,4 +50,9 @@ a[href]{
 .table{
     color:black;
     background-color: white;
+}
+
+p{
+    color:black;
+    font-size:xx-large;
 }
