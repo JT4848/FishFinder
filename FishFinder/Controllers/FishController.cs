@@ -35,11 +35,14 @@ namespace FishFinder.Controllers
             return View(fish);
         }
 
-        public IActionResult UpdateFishToDatabase(Fish fish)
+        [HttpPost]// <== added from kassandra
+        public IActionResult UpdateFishToDatabase(Fish fish, IFormFile picture)
         {
             repo.UpdateFish(fish);
 
             return RedirectToAction("ViewFish", new { id = fish.FishId });
+
+             //<== added from kassandra
         }
 
         public IActionResult InsertFish()
@@ -48,12 +51,15 @@ namespace FishFinder.Controllers
             return View(fish);
         }
 
-        public IActionResult InsertFishToDatabase(Fish fishToInsert)
+        // <== added from kassandra
+        public IActionResult InsertFishToDatabase(Fish fishToInsert, IFormFile picture)
         {
             repo.InsertFish(fishToInsert);
             return RedirectToAction("Index");
+            // <== added from kassandra
         }
 
+        
         public IActionResult DeleteFish(Fish fish)
         {
             repo.DeleteFish(fish);

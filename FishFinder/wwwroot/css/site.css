@@ -25,6 +25,7 @@ body {
 
 
 
+
 /*.nav-link {
         color: orange;
         text-decoration: none;
@@ -43,16 +44,38 @@ h2{
     color: black;
 }
 
-a[href]{
-    color:blue;
+a[href] {
+    color: #50C1CC;
 }
 
-.table{
-    color:black;
+.table {
+    color: black;
     background-color: white;
+    border: solid black 10px;
+    box-shadow: -1rem 1rem 3rem 5rem #27556C;
 }
 
 p{
     color:black;
     font-size:xx-large;
 }
+
+
+#text{
+    color: black;
+}
+
+header{
+    background: #50C1CC;
+    
+}
+
+.footer {
+    background: #26596A;
+}
+
+#footer container{
+    color:chartreuse;
+    
+}
+

@@ -26,14 +26,14 @@ namespace FishFinder
 
         public void UpdateFish(Fish fish)
         {
-            _conn.Execute("UPDATE allfish SET Name = @name, Season = @season, Minimum_Length = @minimum_length, Maximum_Length = @maximum_length, Bag_Limit = @bag_limit, Description = @description WHERE FishId = @Id",
-             new { name = fish.Name, season = fish.Season, minimum_length = fish.Minimum_Length, maximum_length = fish.Maximum_Length, bag_limit = fish.Bag_Limit, description = fish.Description, id = fish.FishId });
+            _conn.Execute("UPDATE allfish SET Name = @name, Season = @season, Minimum_Length = @minimum_length, Maximum_Length = @maximum_length, Bag_Limit = @bag_limit, Description = @description, WHERE FishId = @Id",
+             new { name = fish.Name, season = fish.Season, minimum_length = fish.Minimum_Length, maximum_length = fish.Maximum_Length, bag_limit = fish.Bag_Limit, description = fish.Description, id = fish.FishId }); //added pic code here
         }
 
         public void InsertFish(Fish fishToInsert)
         {
             _conn.Execute("INSERT INTO allfish (NAME, SEASON, MINIMUM_LENGTH, MAXIMUM_LENGTH, BAG_LIMIT, DESCRIPTION, FISHID) VALUES (@name, @season, @minimum_length, @maximum_length, @bag_limit, @description, @fishid);",
-                new { name = fishToInsert.Name, season = fishToInsert.Season, minimum_length = fishToInsert.Minimum_Length, maximum_length = fishToInsert.Maximum_Length, bag_limit = fishToInsert.Bag_Limit, description = fishToInsert.Description, fishid = fishToInsert.FishId });
+                new { name = fishToInsert.Name, season = fishToInsert.Season, minimum_length = fishToInsert.Minimum_Length, maximum_length = fishToInsert.Maximum_Length, bag_limit = fishToInsert.Bag_Limit, description = fishToInsert.Description, fishid = fishToInsert.FishId}); //added pic code here
         }
 
         public IEnumerable<CreateFish> FishCreate()

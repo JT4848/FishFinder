@@ -10,5 +10,6 @@
         public string Description { get; set; }
         public int FishId { get; set; }
         public IEnumerable<CreateFish> Fishes { get; set; }
+        public byte[] Pic { get; set; }
     }
 }
